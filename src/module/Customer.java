@@ -1,13 +1,12 @@
 package module;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
-public class Customer{
+public class Customer implements Comparable<Customer> {
     private Integer id;
     private String firstName, lastName, email;
     private List<Account> accountList = new ArrayList<>();
-
-
 
     public Customer(Integer id, String firstName, String lastName, String email) {
         this.id = id; //sa verific daca exista deja si sa arunc o exceptie eventual
@@ -16,9 +15,6 @@ public class Customer{
         this.email = email;
     }
 
-
-
-
     public void addAccount(Account account) {
         this.accountList.add(account);
     }
@@ -26,24 +22,20 @@ public class Customer{
     //ar merge si un delete
 
 
+    public List<Account> getAccountList() { return new ArrayList<>(accountList); }
+    public Integer getId() { return id; }
+    public String getFirstName() { return firstName; }
+    public String getLastName() { return lastName; } // Bug fixat
+    public String getEmail() { return email; }
+    public void setEmail(String email) { this.email = email; }
 
-    public List<Account> getAccountList() {
-        return new ArrayList<>(accountList);
+    @Override
+    public int compareTo(Customer other) {
+        return this.id.compareTo(other.id);
     }
 
-    public String getFirstName(){
-        return new String(this.firstName);
+    @Override
+    public String toString() {
+        return String.format("Client [%d]: %s %s - Email: %s (Conturi: %d)", id, firstName, lastName, email, accountList.size());
     }
-
-    public String getLastName(){
-        return new String(this.firstName);
-    }
-
-    public Integer getId() {
-        return new Integer(id);
-    }
-
-
-
-    //si setter pt email
 }

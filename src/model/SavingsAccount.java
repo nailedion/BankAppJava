@@ -1,4 +1,4 @@
-package module;
+package model;
 
 public class SavingsAccount extends Account {
     private double interestRate;
@@ -10,6 +10,6 @@ public class SavingsAccount extends Account {
 
     @Override
     public String getAccountType() {
-        return "Cont de Economii (Dobanda: " + interestRate + "%)";
+        return "Cont de Economii(Dobanda: " + interestRate + "%)";
     }
 }

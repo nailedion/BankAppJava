@@ -1,10 +1,8 @@
-package module;
+package model;
 
 public enum TransactionStatus {
     PENDING,
-    PROCESSING,
     SUCCESS,
     FAILED,
-    CANCELLED,
-    REVERSED
+    CANCELLED
 }

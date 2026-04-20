@@ -1,8 +1,7 @@
-package module;
-
+package model;
 import java.time.LocalDateTime;
 
-public class Transaction {
+public final class Transaction {
     private final String transactionId;
     private final String description;
     private final LocalDateTime timestamp;

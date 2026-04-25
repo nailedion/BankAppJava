@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-public class Customer implements Comparable<Customer> {
+public class Customer{
     private Integer id;
     private String firstName, lastName, email;
 
@@ -44,13 +44,6 @@ public class Customer implements Comparable<Customer> {
     public String getLastName() { return lastName; }
     public String getEmail() { return email; }
     public void setEmail(String email) { this.email = email; }
-
-    @Override
-    public int compareTo(Customer other) {
-        int numeComparison = this.lastName.compareToIgnoreCase(other.lastName);
-        if (numeComparison != 0) return numeComparison;
-        return this.id.compareTo(other.id);
-    }
 
     @Override
     public boolean equals(Object o) {

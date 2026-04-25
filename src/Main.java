@@ -20,7 +20,7 @@ public class Main {
 //        accountService.addAccountToCustomer(1, new SavingsAccount("RO01BANC111", 0, Currency.RON, 4.5));
 //        accountService.addAccountToCustomer(2, new CheckingAccount("RO02BANC222", 0, Currency.EUR, 500));
 //
-//        System.out.println("\n3. Cautare client (ID 1)");
+//        System.out.println("\n3. Cautare client(ID 1)");
 //        try {
 //            System.out.println(customerService.findCustomerById(1));
 //        } catch (CustomerNotFoundException e) {
@@ -33,7 +33,7 @@ public class Main {
 //        System.out.println("\n5. Depunere numerar (RO01BANC111)");
 //        accountService.deposit("RO01BANC111", 2000);
 //
-//        System.out.println("\n6. Retragere numerar (RO01BANC111)");
+//        System.out.println("\n6. Retragere numerar(RO01BANC111)");
 //        accountService.withdraw("RO01BANC111", 500);
 //
 //        System.out.println("\n7. Afisare extras de cont");
@@ -41,19 +41,21 @@ public class Main {
 //
 //        System.out.println("\n8. Actualizare email client ID 2");
 //        try {
-//            customerService.findCustomerById(2).setEmail("maria.nou@email.com");
-//            System.out.println("Email actualizat cu succes: " + customerService.findCustomerById(2).getEmail());
+//            var client = customerService.findCustomerById(2);
+//            System.out.println("Adresa veche: " + client.getEmail());
+//            client.setEmail("maria.nou@email.com");
+//            System.out.println("Adresa noua: " + client.getEmail());
 //        } catch (CustomerNotFoundException e) {
 //            System.out.println(e.getMessage());
 //        }
 //
-//        System.out.println("\n9. Stergere cont (RO02BANC222)");
+//        System.out.println("\n9. Stergere cont(RO02BANC222)");
 //        accountService.closeAccount("RO02BANC222");
 //
-//        System.out.println("\n10. Stergere client (ID 2)");
+//        System.out.println("\n10. Stergere client(ID 2)");
 //        customerService.deleteCustomer(2);
 //
-//        System.out.println("\nLista Finala dupa stergere");
+//        System.out.println("\nVERIFICARE FINALA: Lista dupa stergeri");
 //        customerService.showAllCustomers();
 
 
@@ -73,11 +75,11 @@ public class Main {
             System.out.println("\n=== MENIU PRINCIPAL BANCA ===");
             System.out.println("1. Adaugare client nou");
             System.out.println("2. Deschidere cont nou pentru un client");
-            System.out.println("3. Cautare client (dupa ID)");
+            System.out.println("3. Cautare client");
             System.out.println("4. Listare toti clientii");
             System.out.println("5. Depunere numerar intr-un cont");
             System.out.println("6. Retragere numerar dintr-un cont");
-            System.out.println("7. Afisare extras de cont (istoric tranzactii)");
+            System.out.println("7. Afisare extras de cont (istoric tranzactii sortate dupa data)");
             System.out.println("8. Actualizare adresa de email client");
             System.out.println("9. Inchidere/Stergere cont bancar");
             System.out.println("10. Stergere client din sistem");

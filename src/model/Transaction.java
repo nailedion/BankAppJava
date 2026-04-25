@@ -1,7 +1,8 @@
 package model;
+
 import java.time.LocalDateTime;
 
-public final class Transaction {
+public final class Transaction implements Comparable<Transaction> {
     private final String transactionId;
     private final String description;
     private final LocalDateTime timestamp;
@@ -18,6 +19,11 @@ public final class Transaction {
         this.description = description;
         this.status = status;
         this.type = type;
+    }
+
+    @Override
+    public int compareTo(Transaction other) {
+        return other.timestamp.compareTo(this.timestamp);
     }
 
     @Override

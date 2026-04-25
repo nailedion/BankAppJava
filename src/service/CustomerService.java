@@ -19,7 +19,7 @@ public class CustomerService {
             return;
         }
         customers.put(id, new Customer(id, firstName, lastName, email));
-        System.out.println("-> Client adaugat: " + firstName + " " + lastName);
+        System.out.println("    Client adaugat: " + firstName + " " + lastName);
     }
 
     public Customer findCustomerById(Integer id) throws CustomerNotFoundException {
@@ -31,7 +31,7 @@ public class CustomerService {
 
     public void deleteCustomer(Integer id) {
         if (customers.remove(id) != null) {
-            System.out.println("-> Clientul cu ID " + id + " a fost sters din sistem.");
+            System.out.println("    Clientul cu ID " + id + " a fost sters din sistem.");
         } else {
             System.out.println("Eroare: Clientul nu a putut fi sters deoarece nu exista.");
         }

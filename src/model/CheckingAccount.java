@@ -18,6 +18,8 @@ public class CheckingAccount extends Account {
         this.balance -= amount;
     }
 
+    public double getOverdraftLimit() { return overdraftLimit; }
+
     @Override
     public String getAccountType() {
         return "Cont Curent (Overdraft limit: " + overdraftLimit + ")";

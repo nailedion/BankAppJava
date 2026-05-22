@@ -1,6 +1,7 @@
 package model;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 public final class Transaction implements Comparable<Transaction> {
     private final String transactionId;
@@ -10,6 +11,16 @@ public final class Transaction implements Comparable<Transaction> {
     private final Currency currency;
     private final TransactionStatus status;
     private final TransactionType type;
+
+    public Transaction(LocalDateTime timestamp, double amount, Currency currency, String description, TransactionStatus status, TransactionType type) {
+        this.transactionId = UUID.randomUUID().toString();
+        this.timestamp = timestamp;
+        this.amount = amount;
+        this.currency = currency;
+        this.description = description;
+        this.status = status;
+        this.type = type;
+    }
 
     public Transaction(String transactionId, LocalDateTime timestamp, double amount, Currency currency, String description, TransactionStatus status, TransactionType type) {
         this.transactionId = transactionId;

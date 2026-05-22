@@ -8,6 +8,8 @@ public class SavingsAccount extends Account {
         this.interestRate = interestRate;
     }
 
+    public double getInterestRate() { return interestRate; }
+
     @Override
     public String getAccountType() {
         return "Cont de Economii(Dobanda: " + interestRate + "%)";

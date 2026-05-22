@@ -12,11 +12,22 @@ public class Customer{
 
     private Map<String, Account> accounts = new HashMap<>();
 
+    public Customer(String firstName, String lastName, String email) {
+        this.id = null;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+    }
+
     public Customer(Integer id, String firstName, String lastName, String email) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public void addAccount(Account account) {

@@ -32,6 +32,14 @@ public final class Transaction implements Comparable<Transaction> {
         this.type = type;
     }
 
+    public String getTransactionId() { return transactionId; }
+    public String getDescription() { return description; }
+    public LocalDateTime getTimestamp() { return timestamp; }
+    public double getAmount() { return amount; }
+    public Currency getCurrency() { return currency; }
+    public TransactionStatus getStatus() { return status; }
+    public TransactionType getType() { return type; }
+
     @Override
     public int compareTo(Transaction other) {
         return other.timestamp.compareTo(this.timestamp);

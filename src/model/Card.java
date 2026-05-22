@@ -15,6 +15,11 @@ public class Card {
         this.expiryDate = expiryDate;
     }
 
+    public String getCardNumber() { return cardNumber; }
+    public Account getLinkedAccount() { return linkedAccount; }
+    public boolean isContactless() { return isContactless; }
+    public LocalDate getExpiryDate() { return expiryDate; }
+
     @Override
     public String toString() {
         return "Cardul cu terminatia " + cardNumber.substring(cardNumber.length() - 4) + " asociat contului " + linkedAccount.getIban();

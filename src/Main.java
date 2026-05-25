@@ -60,11 +60,11 @@ public class Main {
                     int type = Integer.parseInt(scanner.nextLine());
 
                     if (type == 1) {
-                        System.out.print("Rata dobanda (%): ");
+                        System.out.print("Rata dobanda(%): ");
                         double interest = Double.parseDouble(scanner.nextLine());
                         accountService.addAccountToCustomer(cId, new SavingsAccount(iban, 0, Currency.RON, interest));
                     } else if (type == 2) {
-                        System.out.print("Limita overdraft (RON): ");
+                        System.out.print("Limita overdraft: ");
                         double overdraft = Double.parseDouble(scanner.nextLine());
                         accountService.addAccountToCustomer(cId, new CheckingAccount(iban, 0, Currency.RON, overdraft));
                     } else {

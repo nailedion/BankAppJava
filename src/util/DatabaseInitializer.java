@@ -34,7 +34,7 @@ public class DatabaseInitializer {
 
             try (Statement stmt = conn.createStatement()) {
                 stmt.executeUpdate(schemaSql);
-                System.out.println("Baza de date a fost initializata de la zero cu succes!");
+                System.out.println("Baza de date a fost initializata!");
             }
 
         } catch (Exception e) {
